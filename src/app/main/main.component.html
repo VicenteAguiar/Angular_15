@@ -1,0 +1,13 @@
+<main class="container">
+    <section class="product-containers">
+        <div class="card" *ngFor="let img of imgs; index as i">
+            <div class="product-image" [id]="'img-' + (i + 1)"></div>
+            <h3>{{ img.title }}</h3>
+            <p>{{ img.description }}</p>
+            <p>
+                <span class="bold">{{ img.price | currency:'BRL'}}</span>
+            </p>
+            <a href="#" class="btn">Comprar</a>
+        </div>
+    </section>
+</main>
